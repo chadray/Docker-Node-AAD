@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  if user
+    p displayName: #{user.displayName}
+    p givenName: #{user.givenName}
+    p familyName: #{user.familyName}
+    p UPN: #{user._json.upn }
+    p Profile ID: #{user.id}  
+    p=JSON.stringify(user)
+    a(href="/logout") Log out
+  else
+    h1 Please log in
+    a(href="/login") Log in

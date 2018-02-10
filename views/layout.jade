@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div(id="navbar")
+      if user      
+        span
+          a(href="/") Home
+        span
+          a(href="/account") Account
+        span 
+          a(href="/logout") Log out
+      else      
+        span
+          a(href="/") Home
+        span
+          a(href="/login") Log in
+    block content
+
